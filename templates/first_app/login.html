@@ -1,0 +1,16 @@
+
+
+<!DOCTYPE html>
+
+{%  extends "first_app/base.html"%}
+ {% block body_block %}
+{% load my_extras %}
+        {% if message %}
+            <h4>{{message|cut:'a'}}</h4>
+        {% endif %}
+	 <form method="POST">
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="login">
+    </form>
+ {% endblock %}

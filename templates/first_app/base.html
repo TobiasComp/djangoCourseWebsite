@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Website</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="ul-nav">
+            <li><a href="{% url 'first_app:login' %}">login</a></li>
+            <li><a href="{% url 'first_app:users' %}">users</a></li>
+<!--            <li><a href="{% url 'first_app:form_name' %}">formpage</a></li>-->
+            <li><a href="{% url 'first_app:add_user' %}">add user</a></li>
+        </ul>
+    </nav>
+    <div>
+        {% block body_block %}
+        {% endblock %}
+    </div>
+</body>
+</html>

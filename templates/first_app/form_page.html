@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form_Page</title>
+</head>
+<body>
+    <form method="POST" >
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="Submit"/>
+    </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+{%  extends "first_app/base.html"%}
+ {% block body_block %}
+	<form method="POST" >
+        {{form.as_p}}
+        {% csrf_token %}
+        <input type="submit" value="Submit"/>
+    </form>
+ {% endblock %}

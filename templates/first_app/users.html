@@ -1,0 +1,25 @@
+
+
+<!DOCTYPE html>
+{%  extends "first_app/base.html"%}
+ {% block body_block %}
+	<h1>you've reached the users Route</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Password</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in Users %}
+                <tr>
+                    <td>{{ user.first_name }}</td>
+                    <td>{{ user.last_name }}</td>
+                    <td>{{ user.password }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+ {% endblock %}
